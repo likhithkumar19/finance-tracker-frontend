@@ -7,11 +7,11 @@ const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="d-flex" style={{ minHeight: '100vh', background: '#f0f2f5' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#f8fafc' }}>
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <div className="flex-grow-1 d-flex flex-column" style={{ marginLeft: '240px' }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', marginLeft: '260px' }}>
         <Navbar onMenuClick={() => setSidebarOpen(true)} />
-        <main className="p-4 flex-grow-1">
+        <main style={{ padding: '28px', flex: 1 }}>
           <Outlet />
         </main>
       </div>
